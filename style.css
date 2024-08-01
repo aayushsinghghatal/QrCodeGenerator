@@ -1,0 +1,76 @@
+@font-face {
+    font-family: supreme;
+    src: url(supreme/Frick0.3-Regular.woff);
+}
+
+*{
+    font-family: supreme;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+body {
+    background-color: #FF8E72;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+#wrapper{
+    background-color: #000;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: height 0.3s ease;
+}
+#wrapper.active{
+    height: 405px;
+}
+#qrCode {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+}
+#wrapper.active #qrCode{
+    opacity: 1;
+    pointer-events: auto;
+    height: 230px;
+    width: 230px;
+}
+#qrCode img{
+    height: 220px;
+    width: 220px;
+    border: 2px solid #fff;
+    border-radius: 5%;
+    padding: 10px;
+}
+#form{
+    padding-top: 10px;
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#form input{
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+    padding-top: 7px;
+    width: 100%;
+}
+#form button{
+    background-color: #fff;
+    color: #000;
+    border: 0px;
+    border-radius: 4px;
+    padding: 5px;
+    padding-top: 7px;
+    margin-top: 5px;
+}
